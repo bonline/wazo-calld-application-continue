@@ -7,7 +7,7 @@ from setuptools import find_packages
 from setuptools import setup
 
 with open('wazo/plugin.yml') as file:
-    metadata = yaml.load(file)
+    metadata = yaml.safe_load(file)
 
 setup(
     name=metadata['name'],
